@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text, TouchableOpacity } from "react-native";
+import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 
 const MusicPlayer = () => {
   const [isPlaying, setPlaying] = useState(false);
@@ -10,7 +10,7 @@ const MusicPlayer = () => {
   };
 
   return (
-    <View>
+    <View style={style.player}>
       <Text style={{ fontSize: 24, marginBottom: 10 }}>Now Playing</Text>
       <TouchableOpacity onPress={handlePlayPause}>
         <Text style={{ color: "blue", fontSize: 18 }}>
@@ -20,5 +20,12 @@ const MusicPlayer = () => {
     </View>
   );
 };
+
+const style = StyleSheet.create({
+  player: {
+    justifyContent: "center",
+    alignItems: "center",
+  },
+});
 
 export default MusicPlayer;

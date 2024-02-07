@@ -6,9 +6,8 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text style={styles.hello}>Hello Android!</Text>
-
-      <StatusBar style="auto" />
       <MusicPlayer />
+      <StatusBar style="auto" />
     </View>
   );
 }
@@ -23,6 +22,8 @@ const styles = StyleSheet.create({
 
   hello: {
     fontSize: 20,
-    color: "white",
+    color: "black",
+    justifyContent: "center",
+    alignItems: "flex-start",
   },
 });
